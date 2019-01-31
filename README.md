@@ -5,6 +5,7 @@ This is a simple Python script to export a Notion database with a 'Date' attribu
 
   - `token`: the `token_v2` you can get from your browsers cookies
   - `block`: the Notion URL of your database
+  - `property`: the name of the property you want to use as the date
 
 Also make sure that the `make_title` function in the `make_ics` script fits your Database.
 

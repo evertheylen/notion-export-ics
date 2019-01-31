@@ -10,3 +10,4 @@ Also make sure that the `make_title` function in the `make_ics` script fits your
 
 If you run this script in a cron job, and publish it on some publicly reachable URL, you can import it into Google Calendar :).
 
+[**Interested in these kinds of hacks? There's more at our *Notion Hacks* community!**](https://www.notion.so/notionhacks/Notion-Hacks-27b92f71afcd4ae2ac9a4d14fef0ce47)

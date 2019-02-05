@@ -19,11 +19,5 @@ def hello():
 
 
 if __name__ == '__main__':
-    from flup.server.fcgi import WSGIServer
-    try:
-        WSGIServer(app, bindAddress='./notion-export-ics.sock', umask=0000).run()
-    except (KeyboardInterrupt, SystemExit, SystemError):
-        print("Shutdown requested... exiting")
-    except Exception:
-        traceback.print_exc(file=sys.stdout)
+    app.run(host='127.0.0.1', port=8080, debug=True)
 

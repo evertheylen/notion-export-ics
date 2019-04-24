@@ -1,9 +1,10 @@
 
 import json
-from notion.client import Client
+from notion.client import NotionClient
 from notion_ics import get_ical
+import sys
 
-with open('settings.json') as f:
+with open(sys.argv[1]) as f:
     settings = json.load(f)
 
 client = NotionClient(settings['token'], monitor=False)

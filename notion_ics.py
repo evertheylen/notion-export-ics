@@ -6,11 +6,13 @@ from icalendar import Calendar, Event
 from notion.client import NotionClient
 from notion.collection import CalendarView
 from notion.block import BasicBlock
+from notion.user import User
 
 
 # Hack some representation stuff into notion-py
 
 BasicBlock.__repr__ = BasicBlock.__str__ = lambda self: self.title
+User.__repr__ = User.__str__ = lambda self: self.given_name or self.family_name
 
 
 def get_ical(client, calendar_url, title_format):
@@ -52,9 +54,6 @@ def get_ical(client, calendar_url, title_format):
     cal = Calendar()
     cal.add("summary", "Imported from Notion, via notion-export-ics.")
     cal.add('version', '2.0')
-    
-    print("Properties:")
-    print(properties_by_name)
     
     for e in calendar_entries:
         date = e.get_property(dateprop['id'])

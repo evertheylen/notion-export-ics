@@ -1,4 +1,3 @@
-
 import json
 from notion.client import NotionClient
 from notion_ics import get_ical

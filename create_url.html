@@ -20,14 +20,14 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
-            let url_el = document.getElementById('url');
-            let format_el = document.getElementById('format');
-            let res_el = document.getElementById('result');
+            const url_el = document.getElementById('url');
+            const format_el = document.getElementById('format');
+            const res_el = document.getElementById('result');
         
             function recalc_url() {
-                let url = window.btoa(url_el.value);
-                let format = window.btoa(format_el.value);
-                res = new URL('/ics', window.location.href);
+                const url = window.btoa(url_el.value);
+                const format = window.btoa(format_el.value);
+                const res = new URL('/ics', window.location.href);
                 res.searchParams.append('url', url);
                 res.searchParams.append('format', format);
                 res_el.value = res.href;

@@ -1,3 +1,7 @@
+# ⚠️ Unmaintained!
+
+-----------------
+
 # Notion Export to ICS
 
 This is a simple Python script to export a Notion database with a 'Date' attribute to an ICS file. All the heavy lifting is done by the 
